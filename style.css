@@ -1,0 +1,99 @@
+.flex{
+  display: flex;
+}
+.flex.row{
+  flex-direction: row;
+}
+.flex.column{
+  flex-direction: column;
+}
+.my-1rem{
+ margin: 1rem 0;
+}
+.border-top{
+  border-top: 4px solid #1a1a1a;
+}
+.border-bottom{
+  border-bottom: 4px solid #1a1a1a;
+}
+.items-center{
+  align-items: center;
+}
+.hidden{
+  display: none;
+}
+.transparent{
+  opacity: 0
+}
+
+#app.modal{
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+#app.modal .backdrop{
+  background-color: #00000050;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+#app.modal .card{
+  background-color: white;
+  margin: auto 0;
+  padding: 10px;
+  max-width: 1000px;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  position: relative;
+}
+
+#app.modal .card__error{
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;  
+  width: 100%;
+  justify-content: center;
+}
+#app.modal .card__error .content{
+  background-color: #ffff00dd;
+  padding: 5px;
+  border: 4px solid #aaaa00dd;
+  transform: translateY(-30px);
+  opacity: 0;
+  transition: all .5s;
+}
+#app.modal .card__error .content.show{
+  transform: translateY(10px);
+  opacity: 1;
+
+}
+#app.modal .card__footer{
+  margin-top: auto;
+  padding: 5px 0;
+}
+
+
+#app .card__content{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+#app .card__content .flex.row{
+  border-bottom: 1px dashed #888;
+}
+#app .card__content .flex.row svg{
+  min-width: 20px;
+  margin-right: 1rem;
+}
+
+#app .card__content label{
+  border-top: 1px solid #888;
+  padding: 5px;
+}
+#app .card__content label:nth-last-child(1){
+  border-bottom: 1px solid #888;
+}

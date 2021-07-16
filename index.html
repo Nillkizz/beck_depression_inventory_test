@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="vendor.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="home page-template-default page page-id-16 wp-embed-responsive">
+
+  <main>
+    <div id="app" class="modal">
+      <svg style="display:none">
+        <symbol version="1.1" id="checkbox_checked" x="0px" y="0px" viewBox="0 0 490.05 490.05" style="enable-background:new 0 0 490.05 490.05;" xml:space="preserve" sodipodi:docname="check-mark-1.svg" inkscape:version="1.1 (c4e8f9ed74, 2021-05-24)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"><defs id="defs41" /><sodipodi:namedview id="namedview39" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" showgrid="false" inkscape:zoom="1.1284563" inkscape:cx="72.222557" inkscape:cy="245.02499" inkscape:window-width="1366" inkscape:window-height="724" inkscape:window-x="0" inkscape:window-y="0" inkscape:window-maximized="1" inkscape:current-layer="Capa_1" /><g id="g6" style="fill:#00ff00"> <g id="g4" style="fill:#00ff00"> <path d="M418.275,418.275c95.7-95.7,95.7-250.8,0-346.5s-250.8-95.7-346.5,0s-95.7,250.8,0,346.5S322.675,513.975,418.275,418.275z M157.175,207.575l55.1,55.1l120.7-120.6l42.7,42.7l-120.6,120.6l-42.8,42.7l-42.7-42.7l-55.1-55.1L157.175,207.575z" id="path2" style="fill:#00ff00" /> </g></g><g id="g8" style="fill:#00ff00"></g><g id="g10" style="fill:#00ff00"></g><g id="g12" style="fill:#00ff00"></g><g id="g14" style="fill:#00ff00"></g><g id="g16" style="fill:#00ff00"></g><g id="g18" style="fill:#00ff00"></g><g id="g20" style="fill:#00ff00"></g><g id="g22" style="fill:#00ff00"></g><g id="g24" style="fill:#00ff00"></g><g id="g26" style="fill:#00ff00"></g><g id="g28" style="fill:#00ff00"></g><g id="g30" style="fill:#00ff00"></g><g id="g32" style="fill:#00ff00"></g><g id="g34" style="fill:#00ff00"></g><g id="g36" style="fill:#00ff00"></g></symbol>
+      </svg>
+      <div class="backdrop">
+        <div class="card">
+          <div class="card__error">
+            <div class="content">
+              Для продолжения - выберите один из вариантов.
+            </div>
+          </div>
+          <div class="card__header border-bottom">
+          </div>
+          <div class="card__content">
+          </div>
+          <div class="card__footer border-top">
+    
+          </div>
+        </div>
+      </div>
+      <template id="contentStartTemplate">
+            <h3>Инструкция.</h3>
+            <p> Этот опросник состоит из 21 групп утверждений.<br> Прочтите внимательно и выберите номер (0, 1, 2 или 3) утверждения, наилучшим образом отражающего Ваше самочувствие в течение ПОСЛЕДНЕЙ НЕДЕЛИ, включая СЕГОДНЯШНИЙ ДЕНЬ. <br>Если подходящими Вам кажутся несколько утверждений в группе, отметьте каждое из них. Убедитесь, что Вы прочитали все утверждения в каждой группе, прежде, чем сделать выбор. </p>
+      </template>
+      <template id="contentStepTemplate">
+        <label>
+          <input type="checkbox" value='0' data-action='checkbox'> <span>{{ choice0 }}</span>
+        </label>
+        <label>
+          <input type="checkbox" value='1' data-action='checkbox'> <span>{{ choice1 }}</span> 
+        </label>
+        <label>
+          <input type="checkbox" value='2' data-action='checkbox'> <span>{{ choice2 }}</span>
+        </label>
+        <label>
+          <input type="checkbox" value='3' data-action='checkbox'> <span>{{ choice3 }}</span>
+        </label>
+      </template>
+
+      <template id="footerStepStartTemplate">
+        <button data-action="next-step">Начать</button>
+      </template>
+      <template id="footerStepMiddleTemplate">
+        <button data-action="prev-step">Назад</button>
+        <button data-action="next-step">Дальше</button>
+      </template>
+      <template id="footerStepEndTemplate">
+        <button data-action="prev-step">Назад</button>
+        <button data-action="get-result">Получить результат</button>
+      </template>
+
+      <template id="contentResultTemplate">
+        <p class="my-1rem">Ваш результат:</p>
+        <blockquote class="wp-block-quote"></blockquote>
+      </template>
+      <template id="contentResultAnswerRowTemplate">
+        <div class="flex row items-center">
+          <svg width="20" height="20"><use xlink:href="#checkbox_checked"></use></svg>
+          <span></span>
+        </div>
+
+      </template>
+      <template id="emptyTemplate"></template>
+      <template id="h2HeaderTemplate">
+        <h2>Шкала депрессии Бека (BDI)</h2>
+      </template>
+      <template id="debugDataTemplate">
+            step: <span class="step">0</span> | total: <span class="total">0</span>
+      </template>
+      <template id="footerResultTemplate">
+        <button data-action="toggle-result">Ваши ответы</button>
+      </template>
+      <template id=""></template>
+      
+    </div>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>
